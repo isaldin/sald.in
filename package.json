@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "nodemon",
-    "build": "yarn test && yarn lint && (rm -rf ./build || true) && yarn tsc -p ./tsconfig.build.json && yarn ef-tspm -c ./tsconfig.build.json",
+    "build": "(rm -rf ./build || true) && yarn tsc -p ./tsconfig.build.json && yarn ef-tspm -c ./tsconfig.build.json",
     "test": "jest",
     "lint": "yarn eslint 'src/**'"
   },
