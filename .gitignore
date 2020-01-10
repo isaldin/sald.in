@@ -1,2 +1,4 @@
 node_modules
-build
+dist
+.fusebox
+**/*.DS_Store

@@ -4,30 +4,39 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start:dev": "nodemon",
-    "build": "(rm -rf ./build || true) && yarn tsc -p ./tsconfig.build.json && yarn ef-tspm -c ./tsconfig.build.json",
+    "dev": "ts-node -T fuse.ts",
+    "dist": "(rm -rf dist || true) && yarn tsc -p ./src/tsconfig.json --noEmit && ts-node -T fuse dist",
     "test": "jest",
-    "lint": "yarn eslint 'src/**'"
+    "lint": "yarn eslint --ext .ts,.tsx src/"
   },
   "dependencies": {
-    "ramda": "0.26.1"
+    "ramda": "0.26.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
   },
   "devDependencies": {
     "@ef-carbon/tspm": "2.2.5",
     "@types/jest": "24.0.25",
     "@types/node": "13.1.1",
+    "@types/react": "16.9.17",
+    "@types/react-dom": "16.9.4",
     "@typescript-eslint/eslint-plugin": "2.14.0",
     "@typescript-eslint/parser": "2.14.0",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.9.0",
     "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "fuse-box": "4.0.0-next.165",
     "jest": "24.9.0",
+    "node-sass": "4.13.0",
     "nodemon": "2.0.2",
+    "postcss-modules": "1.5.0",
     "prettier": "1.19.1",
     "supertest": "4.0.2",
     "ts-jest": "24.2.0",
     "ts-node": "8.5.4",
     "tsconfig-paths": "3.9.0",
+    "tslib": "1.10.0",
     "typescript": "3.7.4"
   }
 }
