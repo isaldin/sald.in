@@ -7,5 +7,5 @@ import './assets/styles/global.scss';
 import globalStyles from './assets/styles/global.scss';
 
 const rootContainer = document.getElementById('root');
-rootContainer?.setAttribute('class', globalStyles.root);
+rootContainer && rootContainer.setAttribute('class', globalStyles.root);
 ReactDOM.render(<App />, rootContainer);
