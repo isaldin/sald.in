@@ -1,12 +1,12 @@
 .container {
-  background-color: #5ea9be;
+  background-color: #2f2f2b;
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
 
   & span {
-    text-shadow: 4px 4px 4px #aaa;
+    text-shadow: 3px 3px 3px #000;
     font-family: 'Roboto Slab', serif;
     font-size: 64px;
     color: lightgray;
