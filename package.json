@@ -8,8 +8,8 @@
     "clean": "(rm -rf dist || true) && (rm -rf node_modules || true)",
     "dist": "(rm -rf dist || true) && yarn tsc -p ./src/tsconfig.json --noEmit && yarn lint && ts-node -T fuse dist",
     "docker:prod": "docker build -f docker/Dockerfile . -t sald.in/homepage:latest",
-    "lint": "yarn eslint --ext .ts,.tsx src/",
-    "test": "jest"
+    "test": "jest",
+    "lint": "yarn eslint --ext .ts,.tsx src/"
   },
   "dependencies": {
     "ramda": "0.26.1",
