@@ -7,7 +7,7 @@
     "dev": "ts-node -T fuse.ts",
     "clean": "(rm -rf dist || true) && (rm -rf node_modules || true)",
     "dist": "(rm -rf dist || true) && yarn tsc -p ./src/tsconfig.json --noEmit && yarn lint && ts-node -T fuse dist",
-    "docker:prod": "docker build -f docker/Dockerfile . -t spa/nginx",
+    "docker:prod": "docker build -f docker/Dockerfile . -t sald.in/homepage:latest",
     "test": "jest",
     "lint": "yarn eslint --ext .ts,.tsx src/"
   },

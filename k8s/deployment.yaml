@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: sald.in-deployment
+spec:
+  selector:
+    matchLabels:
+      app: homepage
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: homepage
+    spec:
+      containers:
+        - name: sald-in
+          image: sald.in/homepage:latest
+          ports:
+            - containerPort: 80
