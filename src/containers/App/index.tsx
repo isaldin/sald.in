@@ -6,7 +6,7 @@ type Props = {};
 
 const App: React.FunctionComponent<Props> = () => (
   <div className={styles.container}>
-    <span>{`Hello, guest.`}</span>
+    <span>{`Hello, guest!`}</span>
   </div>
 );
 

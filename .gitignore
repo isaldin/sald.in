@@ -1,4 +1,5 @@
 node_modules
 dist
 .fusebox
+k8s/kustomize
 **/*.DS_Store
