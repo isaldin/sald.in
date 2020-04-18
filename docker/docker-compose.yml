@@ -2,6 +2,7 @@ version: '3.4'
 services:
   frontend:
     image: sald.in:latest
+    container_name: saldin_site
     build:
       context: ../
       dockerfile: docker/Dockerfile
