@@ -22,4 +22,4 @@ jobs:
           host: ${{ secrets.SALDIN_HOST }}
           username: ${{ secrets.SALDIN_USERNAME }}
           password: ${{ secrets.SALDIN_PASSWORD }}
-          script: cd /home/docker/sald.in && git pull && docker-compose -f docker/docker-compose.yml down && docker-compose -f docker/docker-compose.yml up -d
+          script: cd /home/docker/sald.in && git pull && docker-compose -f docker/docker-compose.yml down && docker-compose -f docker/docker-compose.yml build && docker-compose -f docker/docker-compose.yml up -d
