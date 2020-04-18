@@ -6,7 +6,7 @@ name: remote container restart
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -16,10 +16,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: connect over ssh and restart container
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SALDIN_HOST }}
-        username: ${{ secrets.SALDIN_USERNAME }}
-        password: ${{ secrets.SALDIN_PASSWORD }}
-        script: cd /home/docker/ && ls -la
+      - name: connect over ssh and restart container
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SALDIN_HOST }}
+          username: ${{ secrets.SALDIN_USERNAME }}
+          password: ${{ secrets.SALDIN_PASSWORD }}
+          script: cd /home/docker/sald.in && git pull && docker-compose -f docker/docker-compose.yml down && docker-compose -f docker/docker-compose.yml up -d
