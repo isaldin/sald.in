@@ -7,7 +7,7 @@ services:
       context: ../
       dockerfile: docker/Dockerfile
       target: static-html
-    restart: unless-stopped
+    restart: always
     ports:
       - 80:80/tcp
       - 443:443/tcp
