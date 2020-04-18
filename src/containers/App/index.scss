@@ -4,11 +4,9 @@
   flex: 1;
   align-items: center;
   justify-content: center;
-
-  & span {
-    text-shadow: 3px 3px 3px #000;
-    font-family: 'Roboto Slab', serif;
-    font-size: 64px;
-    color: lightgray;
-  }
+  text-shadow: 3px 3px 3px #000;
+  font-family: 'Roboto Slab', serif;
+  font-size: 64px;
+  color: lightgray;
+  text-align: center;
 }
