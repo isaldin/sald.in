@@ -9,6 +9,5 @@ RUN yarn install --production=false
 COPY . .
 RUN yarn dist
 
-FROM nginx:1.16.1-alpine
-EXPOSE 80
+FROM staticfloat/nginx-certbot as static-html
 COPY --from=build-env /usr/src/app/dist/ /usr/share/nginx/html
