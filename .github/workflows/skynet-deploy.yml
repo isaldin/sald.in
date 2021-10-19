@@ -21,4 +21,4 @@ jobs:
         uses: SkynetLabs/deploy-to-skynet-action@v2
         with:
           upload-dir: dist
-          registry-seed: ${{ '' }}
+          registry-seed: ${{ secrets.SKYNET_REGISTRY_SEED }}
