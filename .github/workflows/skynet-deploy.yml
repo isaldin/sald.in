@@ -13,11 +13,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16.x
-        - run: yarn
-        - run: yarn dist
 
-        - name: "Deploy to Skynet"
-          uses: SkynetLabs/deploy-to-skynet-action@v2
-          with:
-            upload-dir: dist
-            registry-seed: ${{ '' }}
+      - run: yarn
+      - run: yarn dist
+
+      - name: "Deploy to Skynet"
+        uses: SkynetLabs/deploy-to-skynet-action@v2
+        with:
+          upload-dir: dist
+          registry-seed: ${{ '' }}
