@@ -18,7 +18,12 @@ jobs:
       - run: yarn dist
 
       - name: "Deploy to Skynet"
+        id: skynet_deploy
         uses: SkynetLabs/deploy-to-skynet-action@v2
         with:
           upload-dir: dist
           registry-seed: ${{ secrets.SKYNET_REGISTRY_SEED }}
+
+      - name: Postdeploy
+        run: |
+          echo "link is ${{ steps.skynet_deploy.outputs.resolver-skylink-url }}"
