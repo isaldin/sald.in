@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel dev:tailwind dev:http",
-    "dev:tailwind": "tailwindcss -i ./input.css -o ./src/styles.css --watch",
+    "dev:tailwind": "tailwindcss -i ./input.css -o src/styles.css --watch",
     "dev:http": "http-server ./src"
   },
   "license": "ISC",
